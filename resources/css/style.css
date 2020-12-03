@@ -1,0 +1,443 @@
+/* --------------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: white;
+    color: rgb(94, 93, 93);
+    font-family: 'Lato';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix { zoom: 1}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/* --------------------------------------------- */
+/* RE-USABLE COMPONENTS */
+/* --------------------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 70px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* --------------------------------------------- */
+/* GENERIC LINKS */
+/* --------------------------------------------- */
+
+.city-feature a:link,
+.city-feature a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s;
+}
+
+.city-feature a:hover
+.city-feature a:active {
+    color: #b05d14;
+    border-bottom: 1px solid transparent;
+}
+
+/* --------------------------------------------- */
+/* HEADER */
+/* --------------------------------------------- */
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("images/klvirat.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.klvirat-text {
+    position: absolute;
+    width: 1140px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+/* --------------------------------------------- */
+/* HEADING */
+/* --------------------------------------------- */
+
+h1,h2,h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px; 
+    color: white;
+    font-size: 250%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 150%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom:15px;
+}
+
+/* --------------------------------------------- */
+/* PARAGRAPHS */
+/* --------------------------------------------- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* --------------------------------------------- */
+/* FEATURES */
+/* --------------------------------------------- */
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------- */
+/* ICONS */
+/* --------------------------------------------- */
+
+.icon-big {
+    font-size: 300%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+
+/* --------------------------------------------- */
+/* TEAMS */
+/* --------------------------------------------- */
+
+.section-teams {
+    padding: 0;
+}
+
+.teams-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.teams-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.team-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.team-photo img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.7;
+}
+
+.team-photo img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+
+/* --------------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------------- */
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border: 1px solid #e67e22;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #b05d14;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: #b05d14;
+    color: white;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 45px;
+}
+
+.main-nav li {
+    display: inline;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 1px solid #e67e22;
+    padding: 8px 0;
+}
+
+/* --------------------------------------------- */
+/* HOW IT WORKS */
+/* --------------------------------------------- */
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 10px;
+    float: left;
+    font-size: 150%;
+    margin-right: 10px;
+}
+
+.works-step p {
+    padding: 10px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* --------------------------------------------- */
+/* CITIES */
+/* --------------------------------------------- */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+}
+
+
+/* --------------------------------------------- */
+/* SIGN UP */
+/* --------------------------------------------- */
+
+.ticket-category {
+    border: 1px solid #e67e22;
+    padding: 20%;
+    border-radius: 15px;
+}
+
+.ticket-category i{
+    display: inline-block;
+    width: 5%;
+    height: auto;
+    float: left;
+    color: #e67e22;
+    margin-right: 2%;
+}
+
+.ticket-category a {
+    margin-top: 5%;
+}
+
+/* --------------------------------------------- */
+/* CONTACT FORM */
+/* --------------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+}
+
+textarea {
+    height: 100px;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* --------------------------------------------- */
+/* FOOTER */
+/* --------------------------------------------- */
+
+footer {
+    background-color: rgba(39, 38, 38, 0.979);
+    padding:25px;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-icons {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-icons li {
+    display: inline-block;
+    margin-right:20px;
+}
+
+.footer-nav li:last-child,
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-icons li a:link,
+.social-icons li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: rgba(255, 255, 255, 0.596);
+    transition: color 0.2s
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-icons li a:active,
+.social-icons li a:hover {
+    color: white;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.596);
+    text-align: center;
+    margin-top: 60px;
+}
